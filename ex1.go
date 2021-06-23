@@ -1,6 +1,6 @@
 package main
 
-import(
+import (
 	"fmt"
 )
 
@@ -24,14 +24,44 @@ func getThousand(n int) string {
 	return str
 }
 
+func getHundred(n int) string {
+	hundred := (int)(n / 100)
+	str := ""
+	if hundred == 1 {
+		str = "C"
+	} else if hundred == 2 {
+		str = "CC"
+	} else if hundred == 3 {
+		str = "CCC"
+	} else if hundred == 4 {
+		str = "CD"
+	} else if hundred == 5 {
+		str = "D"
+	} else if hundred == 6 {
+		str = "DC"
+	} else if hundred == 7 {
+		str = "DCC"
+	} else if hundred == 8 {
+		str = "DCCC"
+	} else if hundred == 9 {
+		str = "CM"
+	}
+	return str
+}
+
 func solve(n int) string {
 	//千のくらいについてローマ数字を返す
 	thouSandStr := getThousand(n)
-	return thouSandStr
+
+	hnum := calcu(n, 1000)
+
+	hundRedStr := getHundred(hnum)
+
+	return thouSandStr + hundRedStr
 }
 
-func calcu(n int, m int) int{
-    return (n%m)
+func calcu(n int, m int) int {
+	return (n % m)
 }
 
 func main() {
