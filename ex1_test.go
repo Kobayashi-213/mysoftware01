@@ -9,15 +9,15 @@ func Test01(t *testing.T) {
 	}
 }
 
-/*func Test02(t *testing.T) {
-	result := calcu(1990)
-	expected := 1
+func Test02(t *testing.T) {
+	result := calcu(1990, 1000)
+	expected := 990
 	if result != expected {
 		t.Error("Test02 is failed")
 	}
 }
 
-func Test03(t *testing.T) {
+/*func Test03(t *testing.T) {
 	result := calcu(1990)
 	result2 := numToStr(result)
 	expected := "I"

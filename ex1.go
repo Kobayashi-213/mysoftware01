@@ -1,11 +1,10 @@
 package main
 
-import (
+import(
 	"fmt"
 )
 
 //千のくらいについてローマ数字を返す
-
 func getThousand(n int) string {
 
 	thouSand := (int)(n / 1000)
@@ -28,8 +27,11 @@ func getThousand(n int) string {
 func solve(n int) string {
 	//千のくらいについてローマ数字を返す
 	thouSandStr := getThousand(n)
-
 	return thouSandStr
+}
+
+func calcu(n int, m int) int{
+    return (n%m)
 }
 
 func main() {
