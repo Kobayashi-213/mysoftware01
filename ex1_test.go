@@ -18,18 +18,16 @@ func Test02(t *testing.T) {
 }
 
 func Test03(t *testing.T) {
-	result := solve(1990)
+	result := solve(1900)
 	expected := "MCM"
 	if result != expected {
 		t.Error("Test03 is failed")
 	}
 }
-
-/*func Test04(t *testing.T) {
-	result := calcu(3000)
-	result2 := numToStr(result)
-	expected := "MMM"
+func Test04(t *testing.T) {
+	result := solve(1999)
+	expected := "MCMXCIX"
 	if result != expected {
-		t.Error("Test03 is failed")
+		t.Error("Test04 is failed")
 	}
-}*/
+}
