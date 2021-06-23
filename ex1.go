@@ -4,7 +4,6 @@ import (
 	"fmt"
 )
 
-
 //千のくらいについてローマ数字を返す
 
 func getThousand(n int) string {
